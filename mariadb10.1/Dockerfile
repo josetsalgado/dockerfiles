@@ -1,0 +1,11 @@
+FROM mariadb:10.1
+
+ADD ./my.cnf /etc/mysql/my.cnf
+
+ENV MYSQL_RANDOM_ROOT_PASSWORD yes
+ENV MYSQL_DATABASE test
+ENV MYSQL_USER dbuser
+ENV MYSQL_PASSWORD 123456
+
+
+CMD ["mysqld"]
